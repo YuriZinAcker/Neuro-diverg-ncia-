@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>NeuroDiverso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Site educativo sobre Autismo, TDAH e outras neurodivergências, com foco em empatia, inclusão e informação acessível."
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="https://i.pinimg.com/736x/18/f1/ea/18f1eab7fcfc2160a6dc597472c935f9.jpg"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+
+  <!-- HEADER CORRIGIDO -->
+  <header class="topo">
+    <div class="topo-inner" style="display:flex; align-items:center; gap:12px; width:100%;">
+      <div class="logo">
+        <img
+          class="logo-simbolo"
+          src="https://i.pinimg.com/1200x/5f/95/bb/5f95bb5caec43a0dcc2569989f129072.jpg"
+          alt="NeuroDiverso"
+        />
+        <span class="logo-texto">NeuroDiverso</span>
+      </div>
+
+      <nav class="menu" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#neurodivergencia">O que é</a>
+        <a href="#autismo">Autismo (TEA)</a>
+        <a href="#tdah">TDAH</a>
+        <a href="#outras">Outras</a>
+        <a href="#dicas">Convivência</a>
+        <a href="#recursos">Recursos</a>
+      </nav>
+
+      <div style="margin-left:auto; display:flex; gap:12px; align-items:center;">
+        <span id="userStatus" class="user-status" aria-live="polite"></span>
+
+        <button
+          id="openQuizBtn"
+          class="btn-primario quiz-button"
+          aria-haspopup="dialog"
+          aria-controls="quizModal"
+          aria-expanded="false"
+        >
+          Fazer o Quiz 🧠
+        </button>
+
+        <button
+          id="themeToggleBtn"
+          class="btn-primario"
+          aria-pressed="false"
+          aria-label="Alternar tema claro/escuro"
+        >
+          🌓
+        </button>
+
+        <button
+          id="openLoginBtn"
+          class="login-icon"
+          aria-haspopup="dialog"
+          aria-controls="loginModal"
+          aria-expanded="false"
+          aria-label="Abrir login"
+        >
+          👤
+        </button>
+
+        <button
+          id="logoutBtn"
+          class="login-icon logout-btn"
+          aria-label="Sair"
+          style="display:none;"
+        >
+          ⏻
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-box">
+    <main>
+      <section id="inicio" class="section hero">
+        <div class="hero-texto">
+          <h1>Autismo, TDAH e outras neurodivergências</h1>
+          <p>
+            Este site traz informações <strong>acessíveis e respeitosas</strong> sobre diferentes formas
+            de funcionamento do cérebro humano, estimulando <strong>empatia</strong>, <strong>inclusão</strong> e
+            <strong>acolhimento</strong>.
+          </p>
+          <p class="aviso">
+            ⚠️ Conteúdo educativo; não substitui profissionais de saúde (médicos, psicólogos, psiquiatras, etc.).
+          </p>
+          <button id="botaoCuriosidade" class="btn-primario">Mostrar curiosidade aleatória 🤔</button>
+          <p id="curiosidadeTexto" class="curiosidade" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section id="neurodivergencia" class="section">
+        <h2>O que é neurodivergência?</h2>
+        <div class="grid-2">
+          <div>
+            <p>
+              O termo <strong>neurodivergência</strong> descreve pessoas cujo cérebro funciona, aprende e percebe o
+              mundo de maneiras diferentes do padrão considerado “neurotípico”.
+            </p>
+            <p>
+              Isso inclui autismo, TDAH, dislexia, discalculia, entre outras condições. Não é “defeito” nem “falta de
+              esforço”, e sim <strong>uma forma diferente de funcionamento neurológico</strong>.
+            </p>
+          </div>
+          <div class="card destaque">
+            <h3>Neurodivergente ≠ menos capaz</h3>
+            <p>
+              Pessoas neurodivergentes podem ter desafios em algumas áreas e, ao mesmo tempo, grandes talentos em
+              outras: criatividade, foco intenso em interesses específicos, pensamento fora da caixa e resolução de
+              problemas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="autismo"
+        class="section section-colorida autismo autismo-section-wrapper"
+        aria-labelledby="autismo-title"
+      >
+        <h2 id="autismo-title" class="autismo-title">Autismo (TEA)</h2>
+        <p class="autismo-intro">
+          O <strong>Transtorno do Espectro Autista (TEA)</strong> afeta comunicação, percepção do mundo e interação
+          social. “Espectro” indica que existem muitos jeitos diferentes de ser autista.
+        </p>
+
+        <div class="cards-row" role="list">
+          <div class="card info-card info-card--highlight" role="listitem">
+            <h3>Possíveis características</h3>
+            <ul>
+              <li>Dificuldade em interações sociais e comunicação recíproca;</li>
+              <li>Interesses intensos em temas específicos;</li>
+              <li>Preferência por rotinas e previsibilidade;</li>
+              <li>Hiper ou hipossensibilidade a sons, luzes e texturas.</li>
+            </ul>
+          </div>
+
+          <div class="card info-card" role="listitem">
+            <h3>Mitos comuns</h3>
+            <ul class="mitos-list">
+              <li>
+                <span class="dot"><span class="cross">✕</span></span>
+                <p>“Todo autista é igual” – o espectro é amplo;</p>
+              </li>
+              <li>
+                <span class="dot"><span class="cross">✕</span></span>
+                <p>“Falta de carinho causa autismo” – isso não é verdade;</p>
+              </li>
+              <li>
+                <span class="dot"><span class="cross">✕</span></span>
+                <p>“Autismo tem cura” – trata-se de um jeito de ser.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card info-card" role="listitem">
+            <h3>Formas de apoio</h3>
+            <ul>
+              <li>Ambientes previsíveis e organizados;</li>
+              <li>Comunicação clara, objetiva e respeitosa;</li>
+              <li>Respeitar limites sensoriais;</li>
+              <li>Acompanhamento profissional quando necessário.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="tdah" class="section section-colorida tdah">
+        <h2>TDAH – Transtorno de Déficit de Atenção e Hiperatividade</h2>
+        <p>
+          O <strong>TDAH</strong> é uma condição neurobiológica com possíveis dificuldades de atenção, impulsividade
+          e/ou hiperatividade. Não é “falta de vontade”.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Apresentações</h3>
+            <ul>
+              <li>Predominantemente desatento;</li>
+              <li>Predominantemente hiperativo/impulsivo;</li>
+              <li>Combinado.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Possíveis sinais</h3>
+            <ul>
+              <li>Dificuldade para se manter focado;</li>
+              <li>Esquecimentos frequentes;</li>
+              <li>Agitação/inquietação;</li>
+              <li>Impulsividade.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Estratégias úteis</h3>
+            <ul>
+              <li>Agendas, lembretes e checklists;</li>
+              <li>Dividir tarefas grandes em etapas;</li>
+              <li>Rotinas e horários definidos;</li>
+              <li>Organizar o ambiente para reduzir distrações.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="outras" class="section">
+        <h2>Outras neurodivergências</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Dislexia</h3>
+            <p>Dificuldades específicas na leitura e escrita que não se explicam por falta de estudo.</p>
+          </div>
+          <div class="card">
+            <h3>Discalculia</h3>
+            <p>Dificuldade específica com números e raciocínio matemático.</p>
+          </div>
+          <div class="card">
+            <h3>Disgrafia e dispraxia</h3>
+            <p>Podem envolver dificuldades motoras finas e de coordenação.</p>
+          </div>
+          <div class="card">
+            <h3>Altas habilidades / superdotação</h3>
+            <p>Desempenho muito acima da média em uma ou mais áreas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dicas" class="section section-colorida dicas">
+        <h2>Dicas de convivência e inclusão</h2>
+        <ul class="lista-dicas">
+          <li>Escute a pessoa sobre como se sente e do que precisa.</li>
+          <li>Evite rótulos como “preguiçoso” ou “dramático”.</li>
+          <li>Adapte a comunicação: seja claro, objetivo e paciente.</li>
+          <li>Respeite limites sensoriais (barulho, luz, toques, cheiros).</li>
+          <li>Ajude a criar rotinas e lembretes quando for bem-vindo.</li>
+          <li>Lembre-se: ninguém é só um diagnóstico.</li>
+        </ul>
+      </section>
+
+      <section id="recursos" class="section">
+        <h2>Recursos e próximos passos</h2>
+        <div class="card recursos-box">
+          <p>Se você se identifica com essas descrições, busque ajuda profissional:</p>
+          <ul>
+            <li>Unidades públicas de saúde e serviços de saúde mental;</li>
+            <li>Médicos (psiquiatras, neurologistas, pediatras, clínicos);</li>
+            <li>Psicólogos, neuropsicólogos, TO e fonoaudiólogos;</li>
+            <li>Grupos de apoio de famílias e pessoas neurodivergentes;</li>
+            <li>Materiais educativos de instituições reconhecidas.</li>
+          </ul>
+          <p class="aviso">Em caso de sofrimento intenso ou risco, procure atendimento de emergência.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="rodape">
+    <div class="rodape-inner">
+      <p>
+        Site educativo sobre neurodivergências • Conteúdo informativo (não substitui avaliação profissional).
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal do quiz -->
+  <div id="quizModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="quizTitle">
+    <div class="modal-content" role="document">
+      <button class="close-button" id="closeQuizBtn" aria-label="Fechar modal">&times;</button>
+      <h2 id="quizTitle">Quiz de Conhecimento</h2>
+      <div id="quiz-container">
+        <p>Aguardando o quiz ser iniciado...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="loginTitle">
+    <div class="modal-content" role="document">
+      <button class="close-button" id="closeLoginBtn" aria-label="Fechar modal de login">&times;</button>
+
+      <h2 id="loginTitle">Entrar na conta</h2>
+
+      <form id="loginForm" novalidate>
+        <div class="form-row">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" name="email" type="email" required placeholder="seu@exemplo.com" />
+          <span class="field-error" id="emailError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="loginPassword">Senha</label>
+          <input id="loginPassword" name="password" type="password" required minlength="6" placeholder="••••••" />
+          <span class="field-error" id="passwordError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-row form-inline">
+          <input id="rememberMe" name="remember" type="checkbox" />
+          <label for="rememberMe">Lembrar-me</label>
+        </div>
+
+        <div class="form-row form-actions">
+          <button type="button" class="btn-secondary" id="cancelLoginBtn">Cancelar</button>
+          <button type="submit" class="btn-primary" id="submitLoginBtn">Entrar</button>
+        </div>
+
+        <div style="margin-top:8px;">
+          <small>Não tem conta?
+            <button type="button" id="openSignupFromLogin" class="link-like">Crie uma</button>
+          </small>
+        </div>
+
+        <div id="loginFeedback" aria-live="polite" style="margin-top:12px;"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Cadastro (Signup) -->
+  <div id="signupModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="signupTitle">
+    <div class="modal-content" role="document">
+      <button class="close-button" id="closeSignupBtn" aria-label="Fechar modal de cadastro">&times;</button>
+
+      <h2 id="signupTitle">Criar conta</h2>
+
+      <form id="signupForm" novalidate>
+        <div class="form-row">
+          <label for="signupName">Nome</label>
+          <input id="signupName" name="name" type="text" required placeholder="Seu nome completo" />
+          <span class="field-error" id="nameError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="signupEmail">Email</label>
+          <input id="signupEmail" name="email" type="email" required placeholder="seu@exemplo.com" />
+          <span class="field-error" id="signupEmailError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="signupPassword">Senha</label>
+          <input
+            id="signupPassword"
+            name="password"
+            type="password"
+            required
+            minlength="6"
+            placeholder="••••••"
+          />
+          <span class="field-error" id="signupPasswordError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="signupConfirm">Confirmar senha</label>
+          <input
+            id="signupConfirm"
+            name="confirm"
+            type="password"
+            required
+            minlength="6"
+            placeholder="••••••"
+          />
+          <span class="field-error" id="signupConfirmError" aria-live="polite"></span>
+        </div>
+
+        <div class="form-row form-actions">
+          <button type="button" class="btn-secondary" id="cancelSignupBtn">Cancelar</button>
+          <button type="submit" class="btn-primary" id="submitSignupBtn">Criar conta</button>
+        </div>
+
+        <div id="signupFeedback" aria-live="polite" style="margin-top:12px;"></div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
