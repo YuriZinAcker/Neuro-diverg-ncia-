@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <title>NeuroDiverso</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Site educativo sobre Autismo, TDAH e outras neurodivergências, com foco em empatia, inclusão e informação acessível."
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="https://i.pinimg.com/736x/18/f1/ea/18f1eab7fcfc2160a6dc597472c935f9.jpg"
-  />
+  <meta name="description"
+    content="Site educativo sobre Autismo, TDAH e outras neurodivergências, com foco em empatia, inclusão e informação acessível." />
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://i.pinimg.com/736x/18/f1/ea/18f1eab7fcfc2160a6dc597472c935f9.jpg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  
 
-  <!-- HEADER CORRIGIDO -->
+<body>
+  <!-- Cabeçalho fixo no topo com logo, menu e botões -->
   <header class="topo">
     <div class="topo-inner" style="display:flex; align-items:center; gap:12px; width:100%;">
+      <!-- Área da logo -->
       <div class="logo">
-        <img
-          class="logo-simbolo"
-          src="https://i.pinimg.com/1200x/5f/95/bb/5f95bb5caec43a0dcc2569989f129072.jpg"
-          alt="NeuroDiverso"
-        />
+        <img class="logo-simbolo" src="https://i.pinimg.com/1200x/5f/95/bb/5f95bb5caec43a0dcc2569989f129072.jpg"
+          alt="NeuroDiverso" />
         <span class="logo-texto">NeuroDiverso</span>
       </div>
 
+      <!-- Menu principal de navegação -->
       <nav class="menu" aria-label="Menu principal">
         <a href="#inicio">Início</a>
         <a href="#neurodivergencia">O que é</a>
@@ -41,53 +34,27 @@
         <a href="#recursos">Recursos</a>
       </nav>
 
+      <!-- Botões do lado direito (quiz, tema, login) -->
       <div style="margin-left:auto; display:flex; gap:12px; align-items:center;">
-        <span id="userStatus" class="user-status" aria-live="polite"></span>
-
-        <button
-          id="openQuizBtn"
-          class="btn-primario quiz-button"
-          aria-haspopup="dialog"
-          aria-controls="quizModal"
-          aria-expanded="false"
-        >
+        <!-- Botão que abre o quiz -->
+        <button id="openQuizBtn" class="btn-primario quiz-button" aria-haspopup="dialog" aria-controls="quizModal"
+          aria-expanded="false">
           Fazer o Quiz 🧠
         </button>
-
-        <button
-          id="themeToggleBtn"
-          class="btn-primario"
-          aria-pressed="false"
-          aria-label="Alternar tema claro/escuro"
-        >
-          🌓
-        </button>
-
-        <button
-          id="openLoginBtn"
-          class="login-icon"
-          aria-haspopup="dialog"
-          aria-controls="loginModal"
-          aria-expanded="false"
-          aria-label="Abrir login"
-        >
-          👤
-        </button>
-
-        <button
-          id="logoutBtn"
-          class="login-icon logout-btn"
-          aria-label="Sair"
-          style="display:none;"
-        >
-          ⏻
-        </button>
+        <!-- Botão para alternar tema claro/escuro -->
+        <button id="themeToggleBtn" class="btn-primario" aria-pressed="false"
+          aria-label="Alternar tema claro/escuro">🌓</button>
+        <!-- Botão para abrir o modal de login -->
+        <button id="openLoginBtn" class="login-icon" aria-haspopup="dialog" aria-controls="loginModal"
+          aria-expanded="false" aria-label="Abrir login">👤</button>
       </div>
     </div>
   </header>
 
+  <!-- Caixa geral da página -->
   <div class="page-box">
     <main>
+      <!-- Seção inicial de destaque -->
       <section id="inicio" class="section hero">
         <div class="hero-texto">
           <h1>Autismo, TDAH e outras neurodivergências</h1>
@@ -96,50 +63,50 @@
             de funcionamento do cérebro humano, estimulando <strong>empatia</strong>, <strong>inclusão</strong> e
             <strong>acolhimento</strong>.
           </p>
-          <p class="aviso">
-            ⚠️ Conteúdo educativo; não substitui profissionais de saúde (médicos, psicólogos, psiquiatras, etc.).
-          </p>
+          <!-- Aviso sobre finalidade educativa -->
+          <p class="aviso">⚠️ Conteúdo educativo; não substitui profissionais de saúde (médicos, psicólogos,
+            psiquiatras, etc.).</p>
+          <!-- Botão que gera curiosidade aleatória -->
           <button id="botaoCuriosidade" class="btn-primario">Mostrar curiosidade aleatória 🤔</button>
+          <!-- Texto onde a curiosidade gerada aparece -->
           <p id="curiosidadeTexto" class="curiosidade" aria-live="polite"></p>
         </div>
       </section>
 
+      <!-- Seção explicando o que é neurodivergência -->
       <section id="neurodivergencia" class="section">
         <h2>O que é neurodivergência?</h2>
+        <!-- Grid com texto + card de destaque -->
         <div class="grid-2">
           <div>
-            <p>
-              O termo <strong>neurodivergência</strong> descreve pessoas cujo cérebro funciona, aprende e percebe o
-              mundo de maneiras diferentes do padrão considerado “neurotípico”.
-            </p>
-            <p>
-              Isso inclui autismo, TDAH, dislexia, discalculia, entre outras condições. Não é “defeito” nem “falta de
-              esforço”, e sim <strong>uma forma diferente de funcionamento neurológico</strong>.
-            </p>
+            <p>O termo <strong>neurodivergência</strong> descreve pessoas cujo cérebro funciona, aprende e percebe o
+              mundo de maneiras diferentes do padrão considerado “neurotípico”.</p>
+            <p>Isso inclui autismo, TDAH, dislexia, discalculia, entre outras condições. Não é “defeito” nem “falta de
+              esforço”, e sim <strong>uma forma diferente de funcionamento neurológico</strong>.</p>
           </div>
+          <!-- Card de destaque visual -->
           <div class="card destaque">
             <h3>Neurodivergente ≠ menos capaz</h3>
-            <p>
-              Pessoas neurodivergentes podem ter desafios em algumas áreas e, ao mesmo tempo, grandes talentos em
+            <p>Pessoas neurodivergentes podem ter desafios em algumas áreas e, ao mesmo tempo, grandes talentos em
               outras: criatividade, foco intenso em interesses específicos, pensamento fora da caixa e resolução de
-              problemas.
-            </p>
+              problemas.</p>
           </div>
         </div>
       </section>
 
-      <section
-        id="autismo"
-        class="section section-colorida autismo autismo-section-wrapper"
-        aria-labelledby="autismo-title"
-      >
+      <!-- Seção sobre Autismo -->
+      <section id="autismo" class="section section-colorida autismo autismo-section-wrapper"
+        aria-labelledby="autismo-title">
+        <!-- Título acessível -->
         <h2 id="autismo-title" class="autismo-title">Autismo (TEA)</h2>
+        <!-- Texto introdutório -->
         <p class="autismo-intro">
-          O <strong>Transtorno do Espectro Autista (TEA)</strong> afeta comunicação, percepção do mundo e interação
-          social. “Espectro” indica que existem muitos jeitos diferentes de ser autista.
+          O <strong>Transtorno do Espectro Autista (TEA)</strong> afeta comunicação, percepção do
+          mundo e interação social. “Espectro” indica que existem muitos jeitos diferentes de ser autista.
         </p>
-
+        <!-- Cards informativos -->
         <div class="cards-row" role="list">
+          <!-- Card 1: características -->
           <div class="card info-card info-card--highlight" role="listitem">
             <h3>Possíveis características</h3>
             <ul>
@@ -149,25 +116,22 @@
               <li>Hiper ou hipossensibilidade a sons, luzes e texturas.</li>
             </ul>
           </div>
-
+          <!-- Card 2: mitos -->
           <div class="card info-card" role="listitem">
             <h3>Mitos comuns</h3>
             <ul class="mitos-list">
-              <li>
-                <span class="dot"><span class="cross">✕</span></span>
+              <li><span class="dot"><span class="cross">✕</span></span>
                 <p>“Todo autista é igual” – o espectro é amplo;</p>
               </li>
-              <li>
-                <span class="dot"><span class="cross">✕</span></span>
+              <li><span class="dot"><span class="cross">✕</span></span>
                 <p>“Falta de carinho causa autismo” – isso não é verdade;</p>
               </li>
-              <li>
-                <span class="dot"><span class="cross">✕</span></span>
+              <li><span class="dot"><span class="cross">✕</span></span>
                 <p>“Autismo tem cura” – trata-se de um jeito de ser.</p>
               </li>
             </ul>
           </div>
-
+          <!-- Card 3: apoio -->
           <div class="card info-card" role="listitem">
             <h3>Formas de apoio</h3>
             <ul>
@@ -180,12 +144,12 @@
         </div>
       </section>
 
+      <!-- Seção TDAH -->
       <section id="tdah" class="section section-colorida tdah">
         <h2>TDAH – Transtorno de Déficit de Atenção e Hiperatividade</h2>
-        <p>
-          O <strong>TDAH</strong> é uma condição neurobiológica com possíveis dificuldades de atenção, impulsividade
-          e/ou hiperatividade. Não é “falta de vontade”.
-        </p>
+        <p>O <strong>TDAH</strong> é uma condição neurobiológica com possíveis dificuldades de atenção, impulsividade
+          e/ou hiperatividade. Não é “falta de vontade”.</p>
+        <!-- Três cards em grid -->
         <div class="grid-3">
           <div class="card">
             <h3>Apresentações</h3>
@@ -216,8 +180,10 @@
         </div>
       </section>
 
+      <!-- Outras neurodivergências -->
       <section id="outras" class="section">
         <h2>Outras neurodivergências</h2>
+        <!-- cards -->
         <div class="grid-2">
           <div class="card">
             <h3>Dislexia</h3>
@@ -238,8 +204,10 @@
         </div>
       </section>
 
+      <!-- Dicas de convivência -->
       <section id="dicas" class="section section-colorida dicas">
         <h2>Dicas de convivência e inclusão</h2>
+        <!-- Orientações práticas -->
         <ul class="lista-dicas">
           <li>Escute a pessoa sobre como se sente e do que precisa.</li>
           <li>Evite rótulos como “preguiçoso” ou “dramático”.</li>
@@ -250,6 +218,7 @@
         </ul>
       </section>
 
+      <!-- Recursos e Próximos passos -->
       <section id="recursos" class="section">
         <h2>Recursos e próximos passos</h2>
         <div class="card recursos-box">
@@ -267,19 +236,21 @@
     </main>
   </div>
 
+  <!-- Rodapé -->
   <footer class="rodape">
     <div class="rodape-inner">
-      <p>
-        Site educativo sobre neurodivergências • Conteúdo informativo (não substitui avaliação profissional).
-      </p>
+      <p>Site educativo sobre neurodivergências • Conteúdo informativo (não substitui avaliação profissional).</p>
     </div>
   </footer>
 
-  <!-- Modal do quiz -->
+  <!-- Modal do Quiz -->
   <div id="quizModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="quizTitle">
     <div class="modal-content" role="document">
+      <!-- Botão para fechar o modal -->
       <button class="close-button" id="closeQuizBtn" aria-label="Fechar modal">&times;</button>
+      <!-- Título do quiz -->
       <h2 id="quizTitle">Quiz de Conhecimento</h2>
+      <!-- Conteúdo do quiz gerado via JS -->
       <div id="quiz-container">
         <p>Aguardando o quiz ser iniciado...</p>
       </div>
@@ -290,98 +261,85 @@
   <div id="loginModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="loginTitle">
     <div class="modal-content" role="document">
       <button class="close-button" id="closeLoginBtn" aria-label="Fechar modal de login">&times;</button>
-
       <h2 id="loginTitle">Entrar na conta</h2>
-
+      <!-- Formulário de login -->
       <form id="loginForm" novalidate>
+        <!-- Campo email -->
         <div class="form-row">
           <label for="loginEmail">Email</label>
           <input id="loginEmail" name="email" type="email" required placeholder="seu@exemplo.com" />
           <span class="field-error" id="emailError" aria-live="polite"></span>
         </div>
-
+        <!-- Campo senha -->
         <div class="form-row">
           <label for="loginPassword">Senha</label>
           <input id="loginPassword" name="password" type="password" required minlength="6" placeholder="••••••" />
           <span class="field-error" id="passwordError" aria-live="polite"></span>
         </div>
-
+        <!-- Checkbox lembrar -->
         <div class="form-row form-inline">
           <input id="rememberMe" name="remember" type="checkbox" />
           <label for="rememberMe">Lembrar-me</label>
         </div>
-
+        <!-- Botões -->
         <div class="form-row form-actions">
           <button type="button" class="btn-secondary" id="cancelLoginBtn">Cancelar</button>
           <button type="submit" class="btn-primary" id="submitLoginBtn">Entrar</button>
         </div>
-
+        <!-- Link para abrir cadastro -->
         <div style="margin-top:8px;">
-          <small>Não tem conta?
-            <button type="button" id="openSignupFromLogin" class="link-like">Crie uma</button>
-          </small>
+          <small>Não tem conta? <button type="button" id="openSignupFromLogin" class="link-like">Crie
+              uma</button></small>
         </div>
 
+        <!-- Mensagens de retorno -->
         <div id="loginFeedback" aria-live="polite" style="margin-top:12px;"></div>
       </form>
     </div>
   </div>
 
-  <!-- Modal de Cadastro (Signup) -->
+  <!-- Modal de Cadastro -->
   <div id="signupModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="signupTitle">
     <div class="modal-content" role="document">
       <button class="close-button" id="closeSignupBtn" aria-label="Fechar modal de cadastro">&times;</button>
-
       <h2 id="signupTitle">Criar conta</h2>
-
+      <!-- Formulário de cadastro -->
       <form id="signupForm" novalidate>
+        <!-- Nome -->
         <div class="form-row">
           <label for="signupName">Nome</label>
           <input id="signupName" name="name" type="text" required placeholder="Seu nome completo" />
           <span class="field-error" id="nameError" aria-live="polite"></span>
         </div>
-
+        <!-- Email -->
         <div class="form-row">
           <label for="signupEmail">Email</label>
           <input id="signupEmail" name="email" type="email" required placeholder="seu@exemplo.com" />
           <span class="field-error" id="signupEmailError" aria-live="polite"></span>
         </div>
-
+        <!-- Senha -->
         <div class="form-row">
           <label for="signupPassword">Senha</label>
-          <input
-            id="signupPassword"
-            name="password"
-            type="password"
-            required
-            minlength="6"
-            placeholder="••••••"
-          />
+          <input id="signupPassword" name="password" type="password" required minlength="6" placeholder="••••••" />
           <span class="field-error" id="signupPasswordError" aria-live="polite"></span>
         </div>
-
+        <!-- Confirmar senha -->
         <div class="form-row">
           <label for="signupConfirm">Confirmar senha</label>
-          <input
-            id="signupConfirm"
-            name="confirm"
-            type="password"
-            required
-            minlength="6"
-            placeholder="••••••"
-          />
+          <input id="signupConfirm" name="confirm" type="password" required minlength="6" placeholder="••••••" />
           <span class="field-error" id="signupConfirmError" aria-live="polite"></span>
         </div>
-
+        <!-- Botões -->
         <div class="form-row form-actions">
           <button type="button" class="btn-secondary" id="cancelSignupBtn">Cancelar</button>
           <button type="submit" class="btn-primary" id="submitSignupBtn">Criar conta</button>
         </div>
-
+        <!-- Mensagem de retorno -->
         <div id="signupFeedback" aria-live="polite" style="margin-top:12px;"></div>
       </form>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
