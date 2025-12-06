@@ -86,7 +86,7 @@ app.post('/api/quiz/score', async (req, res) => {
   try {
     const { userId, pontuacao } = req.body;
 
-
+```js
 
 ### Middleware
 
