@@ -4,8 +4,6 @@
 - Estrutura do projeto (resumo)
 - Arquitetura e como o projeto funciona (visão prática)
   - Routes
-  - Models / Acesso ao banco
-  - Seeders
   - Middleware
   - Sessões e autenticação
 - Tecnologias
