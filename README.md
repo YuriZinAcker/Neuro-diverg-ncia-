@@ -91,10 +91,11 @@ app.post('/api/quiz/score', async (req, res) => {
 ### Middleware
 
 Estão todos no server js. Exemplos no projeto:
-
+```js
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+```
 
 ## Tecnologias
 
